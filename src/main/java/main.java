@@ -14,7 +14,8 @@ public class main {
         //po.ejercicio7();
         //po.ejercicio8();
         //po.ejercicio9("hola");
-        po.ejercicio10();
+        //po.ejercicio10();
+        po.ejercicio11();
 
     }
 
@@ -201,17 +202,31 @@ public class main {
         System.out.println("ingrese la frase");
         String leer1=scaner.nextLine();
 
-
-        char[] temp={"a","e","i","o","u"};
+        char [] fraseIngresada=leer1.toCharArray();
+        char[] caracter= new char[5];
+        caracter[0]='a';
+        caracter[1]='e';
+        caracter[2]='i';
+        caracter[3]='o';
+        caracter[4]='u';
+        System.out.println("La frase contiene "+fraseIngresada.length+" caracteres");
         int totalcaracter=0;
-        for (int i = 0; i < leer1.length(); i++) {
+        for(int i=0;i<caracter.length;i++)
+        {
+            for (int j = 0; j < fraseIngresada.length; j++) {
+                if(caracter[i]==fraseIngresada[j])
+                {
+                    totalcaracter++;
+                }
 
-            temp = leer1.charAt(i);
-            if (temp[] == 'i')
-                totalcaracter++;
         }
+            if (totalcaracter==1){
+                System.out.println(caracter[i]+ " aparece " + totalcaracter + " vez en el texto");
+            }else{
+                System.out.println(caracter[i]+ " aparece " + totalcaracter + " veces en el texto");
+            }
 
-        System.out.println(temp+ " aparece " + totalcaracter + " en el texto");
-    }
+            totalcaracter=0;
+        }
     }
 }
