@@ -1,21 +1,57 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
+import java.time.format.DateTimeFormatter;
+//import org.apache.commons.lang3.StringUtils;
 
 public class main {
     public static void main(String[] args) {
         main po= new main();
-        //String ejercicio1=po.ejercicio1(2,1);
-        //String ejercicio2=po.ejercicio2();
-        //String ejercicio3=po.ejercicio3();
-        //String ejercicio4=po.ejercicio4();
-        //po.ejercicio5();
-        //po.ejercicio6();
-        //po.ejercicio7();
-        //po.ejercicio8();
-        //po.ejercicio9("hola");
-        //po.ejercicio10();
-        po.ejercicio11();
+//        String ejercicio1=po.ejercicio1(2,1);
+//        String ejercicio2=po.ejercicio2();
+//        String ejercicio3=po.ejercicio3();
+//        String ejercicio4=po.ejercicio4();
+//        po.ejercicio5();
+//        po.ejercicio6();
+//        po.ejercicio7();
+//        po.ejercicio8();
+//        po.ejercicio9("hola");
+//        po.ejercicio10();
+//        po.ejercicio11();
+//        po.ejercicio12();
+//        po.ejercicio13();
+//        po.ejercicio14();
+//        po.ejercicio15();
+
+//        ejercicio 16
+
+//        Scanner scaner=new Scanner(System.in);
+//        System.out.println("Ingresa Nombre");
+//        String nombre=scaner.nextLine();
+//        System.out.println("Ingresa Edad");
+//        int edad=Integer.parseInt(scaner.nextLine());
+//        System.out.println("Ingresa Sexo");
+//        char sexo=scaner.nextLine().charAt(0);
+//        System.out.println("Ingresa Peso");
+//        double peso=Double.parseDouble(scaner.nextLine());
+//        System.out.println("Ingresa Altura");
+//        double altura=Double.parseDouble(scaner.nextLine());
+//
+//        Persona persona1=new Persona(nombre,edad,sexo,peso,altura);
+//
+//        Persona persona2=new Persona(nombre,edad,sexo);
+//
+//        Persona persona3=new Persona();
+//        persona3.setAltura(190.0);
+//        persona3.setEdad(25);
+//        persona3.setSexo('M');
+//        persona3.setNombre("areger");
+//        persona3.setPeso(50.5);
+
+//        ejercicio 17
+
+//        ejercicio 18
 
     }
 
@@ -228,5 +264,80 @@ public class main {
 
             totalcaracter=0;
         }
+    }
+
+    public void ejercicio12 (){
+        //StringUtils.difference(null,null);
+    }
+
+    public void ejercicio13 (){
+        //Realizar un algoritmo que permita consulta la fecha y hora actual en el formato (AAAA/MM/DD) (HH:MM:SS)
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        System.out.println("yyyy/MM/dd HH:mm:ss-> "+dtf.format(LocalDateTime.now()));
+    }
+
+    public void ejercicio14(){
+//        Crear un programa que pida un numero por teclado y que imprima por pantalla los
+//        números desde el numero introducido hasta 1000 con saldos de 2 en 2.
+        Scanner scaner=new Scanner(System.in);
+        System.out.println("Ingrese una numero");
+        int num=Integer.parseInt(scaner.nextLine());
+
+        for (int i=num;i<=1000;i=i+2){
+            System.out.println(i);
+        }
+    }
+
+    public void ejercicio15 (){
+//        Hacer un programa que muestre el siguiente menú de opciones
+        boolean salir = false;
+        while (salir==false)
+        {
+            System.out.println("****** GESTION CINEMATOGRAFICA ********");
+            System.out.println("1-NUEVO ACTOR");
+            System.out.println("2-BUSCAR ACTOR");
+            System.out.println("3-ELIMINAR ACTOR");
+            System.out.println("4-MODIFICAR ACTOR");
+            System.out.println("5-VER TODOS LOS ACTORES");
+            System.out.println("6- VER PELICULAS DE LOS ACTORES");
+            System.out.println("7-VER CATEGORIA DE LAS PELICULAS DE LOS ACTORES");
+            System.out.println("8-SALIR");
+
+            Scanner scaner=new Scanner(System.in);
+            System.out.println("Ingrese una ocpcion");
+            String res=scaner.nextLine();
+
+        switch (res){
+            case "1":
+                System.out.println("TO DO");
+                break;
+            case "2":
+                System.out.println("TO DO");
+                break;
+            case "3":
+                System.out.println("TO DO");
+                break;
+            case "4":
+                System.out.println("TO DO");
+                break;
+            case "5":
+                System.out.println("TO DO");
+                break;
+            case "6":
+                System.out.println("TO DO");
+                break;
+            case "7":
+                System.out.println("TO DO");
+                break;
+            case "8":
+                salir=true;
+                break;
+            default:
+                System.out.println("opcion no valida");
+
+        }
+        }
+        System.out.println("Hasta Luego!!");
     }
 }
