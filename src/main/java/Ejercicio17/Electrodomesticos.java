@@ -2,17 +2,12 @@ package Ejercicio17;
 
 public class Electrodomesticos {
 
-    private Double precioBase;
-    private  String color ;
+    private Double precioBase=100.0;
+    private  String color="Blanco";
     private char consumoEnergetico;
-    private Double peso;
+    private Double peso=5.0;
 
-    public Electrodomesticos(){
-        this.color="blanco";
-        this.consumoEnergetico='F';
-        this.precioBase=100.0;
-        this.peso=5.0;
-    }
+    public Electrodomesticos(){}
     public Electrodomesticos(Double precio,Double peso){
         this.peso=peso;
         this.precioBase=precio;
@@ -69,7 +64,7 @@ public class Electrodomesticos {
     public double precioFinal()
     {
         double VarlorconsumoEnergetico=0.0;
-        double Varlorpeso=0.0;
+        double Valorpeso=0.0;
         switch (this.consumoEnergetico){
             case 'A':VarlorconsumoEnergetico=100;break;
             case 'B':VarlorconsumoEnergetico=80;break;
@@ -81,23 +76,19 @@ public class Electrodomesticos {
 
 
             if(this.peso>=0 && this.peso<=19){
-                Varlorpeso=100;
+                Valorpeso=10;
             }
-           if(this.peso>=20 && this.peso<=9){
-               Varlorpeso=80;
+           if(this.peso>=20 && this.peso<=49){
+               Valorpeso=50;
            }
-            if(this.peso>0 && this.peso<=9){
-                Varlorpeso=600;
+            if(this.peso>50 && this.peso<=79){
+                Valorpeso=80;
             }
-           if(this.peso>0 && this.peso<9){
-               Varlorpeso=50;
+           if(this.peso>80){
+               Valorpeso=100;
            }
-           if(this.peso>0 && this.peso<9){
-               Varlorpeso=30;
-           }
-           if(this.peso>0 && this.peso<9){
-               Varlorpeso=10;
-        }
 
+
+        return VarlorconsumoEnergetico+Valorpeso;
     }
 }
