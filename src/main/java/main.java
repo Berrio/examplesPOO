@@ -1,10 +1,9 @@
-import Ejercicio17.Electrodomesticos;
-import Ejercicio17.Lavadora;
-import Ejercicio17.Television;
+import Ejercicio16.Persona;
+import Ejercicio18.Serie;
+import Ejercicio18.Videojuego;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 //import org.apache.commons.lang3.StringUtils;
@@ -54,25 +53,60 @@ public class main {
 //        persona3.setPeso(50.5);
 
 //        ejercicio 17
-        Electrodomesticos[] electrodomesticos=new Electrodomesticos[10];
-        electrodomesticos[0] = new Television(80.0,50.0);
-        electrodomesticos[1]= new Television(20.0,35.5,"AMARILLO",'G',50.0,true);
-        electrodomesticos[2]= new Television(30.0,25.5,"BLANCO",'A',20.0,false);
-        electrodomesticos[3]= new Television(60.0,15.5,"VERDE",'B',80.0,true);
-        electrodomesticos[4]= new Television(100.0,85.5,"ROJO",'C',100.0,true);
-        electrodomesticos[5]=new Lavadora(50.0,20.0,80.0);
-        electrodomesticos[6]=new Lavadora(60.0,30.0,80.0);
-        electrodomesticos[7]=new Lavadora(70.0,40.0,80.0);
-        electrodomesticos[8]=new Lavadora(80.0,50.0,80.0);
-        electrodomesticos[9]=new Lavadora(100.0,60.0,80.0);
-
-        for (int i=0;i<electrodomesticos.length;i++)
-        {
-            System.out.println(electrodomesticos[i].precioFinal());
-        }
-
+//        En la carpeta Ejercicio 17 esta el main
 
 //        ejercicio 18
+//        Integer countEntregados=0;
+//        Double countJuegoConMasHoras=0.0;
+//        Integer countSerieMasTemporadas=0;
+//        Serie serieMasTemporadas=new Serie();
+//        Videojuego juegoConMasHoras=new Videojuego();
+//
+//        Serie[] serie=new Serie[5];
+//        Videojuego[] videojuego=new Videojuego[5];
+//
+//        serie[0]=new Serie("batman",5,"Dark","bill gates");
+//        serie[1]=new Serie("superman",4,"Heroes","zuckemberg");
+//        serie[2]=new Serie("robin",6,"Heroes","Duque");
+//        serie[3]=new Serie("Malagan","chepe");
+//        serie[4]=new Serie("Mr President","petro");
+//
+//        videojuego[0]=new Videojuego("Halo",13.0,"Accion","365");
+//        videojuego[1]=new Videojuego("Halo2",12.0,"Accion","365");
+//        videojuego[2]=new Videojuego("Ball",15.0,"Accion","Miyamoto");
+//        videojuego[3]=new Videojuego("Resident evil",5.0);
+//        videojuego[4]=new Videojuego("Farcry",8.0);
+//
+//
+//        serie[0].devolver();
+//        serie[4].devolver();
+//        videojuego[1].devolver();
+//        videojuego[2].devolver();
+//
+//        for(int i=0;i<=4;i++){
+//            if(serie[i].isEntregado()){
+//                countEntregados++;
+//                System.out.println("Titulo: "+serie[i].getTitulo());
+//
+//            }
+//            if(videojuego[i].isEntregado()){
+//                countEntregados++;
+//                System.out.println("Titulo: "+videojuego[i].getTitulo());
+//            }
+//            if(serie[i].getNumTemporadas()>countSerieMasTemporadas){
+//                countSerieMasTemporadas=serie[i].getNumTemporadas();
+//                serieMasTemporadas=serie[i];
+//            }
+//            if(videojuego[i].getHorasEstimadas()>countJuegoConMasHoras){
+//                countJuegoConMasHoras=videojuego[i].getHorasEstimadas();
+//                juegoConMasHoras=videojuego[i];
+//            }
+//
+//        }
+//        System.out.println("los entregados son: "+countEntregados);
+//        System.out.println("Serie con mas temporadas : "+serieMasTemporadas.toString());
+//        System.out.println("Juego con mas Horas : "+juegoConMasHoras.toString());
+
 
     }
 
