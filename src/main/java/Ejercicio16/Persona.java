@@ -6,20 +6,16 @@ import java.util.Arrays;
 
 public class Persona {
 
-    String nombre;
-    Integer edad;
+    String nombre = "";
+    Integer edad = 0;
     String dni;
-    char sexo;
-    Double peso;
-    Double altura;
+    char sexo = 'H';
+    Double peso = 0.0;
+    Double altura = 0.0;
 
-    public Persona(){
-        this.nombre="";
-        this.edad=0;
-        this.sexo='H';
-        this.peso=0.0;
-        this.altura=0.0;
+    public Persona() {
     }
+
     public Persona(String nombre, Integer edad, char sexo, Double peso, Double altura) {
         this.nombre = nombre;
         this.edad = edad;
@@ -36,54 +32,54 @@ public class Persona {
         this.altura = altura;
     }
 
-    public int calcularIMC(double kg,double altura){
-            final int pesoIdeal=-1;
-            final int debajoDePesoIdeal=0;
-            final int sobrePeso=1;
-            int calculo=0;
-            double peso =kg/(Math.pow(altura,2));
+    public int calcularIMC(double kg, double altura) {
+        final int pesoIdeal = -1;
+        final int debajoDePesoIdeal = 0;
+        final int sobrePeso = 1;
+        int calculo = 0;
+        double peso = kg / (Math.pow(altura, 2));
 
-       if (peso<20){
-           calculo= pesoIdeal;
-       }
-       if (peso>20&&peso<=25){
-           calculo= debajoDePesoIdeal;
-       }
-       if (peso>25){
-           calculo= sobrePeso;
-       }
-       return calculo;
+        if (peso < 20) {
+            calculo = pesoIdeal;
+        }
+        if (peso > 20 && peso <= 25) {
+            calculo = debajoDePesoIdeal;
+        }
+        if (peso > 25) {
+            calculo = sobrePeso;
+        }
+        return calculo;
     }
 
-    public boolean esMayorDeEdad(){
-        if (this.edad>=18){
+    public boolean esMayorDeEdad() {
+        if (this.edad >= 18) {
             return true;
         }
         return false;
     }
 
-    public  void comprobarSexo(char sexo){
-        if (sexo=='M'){
-             this.sexo='M';
+    public void comprobarSexo(char sexo) {
+        if (sexo == 'M') {
+            this.sexo = 'M';
             return;
         }
-        this.sexo='H';
+        this.sexo = 'H';
         return;
     }
 
-    public  void generaDNI(){
+    public void generaDNI() {
 
-        String[] dniRandom=new String[8];
+        String[] dniRandom = new String[8];
 
         int numero;
 
-        for (int i=0;i<8;i++){
-            numero=(int) (Math.random() * 10);
-            dniRandom[i]=String.valueOf(numero);
+        for (int i = 0; i < 8; i++) {
+            numero = (int) (Math.random() * 10);
+            dniRandom[i] = String.valueOf(numero);
         }
 
-        String dni=String.join(" ",dniRandom);
-        this.dni=dni.replace(" ","");
+        String dni = String.join(" ", dniRandom);
+        this.dni = dni.replace(" ", "");
     }
 
     public void setNombre(String nombre) {

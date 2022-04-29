@@ -1,7 +1,7 @@
 package Ejercicio17;
 
-public class Lavadora extends Electrodomesticos{
-    private Double Carga=5.0;
+public class Lavadora extends Electrodomesticos {
+    private Double Carga = 5.0;
 
     public Lavadora() {
     }
@@ -22,9 +22,8 @@ public class Lavadora extends Electrodomesticos{
 
     @Override
     public double precioFinal() {
-        if(this.Carga>30)
-        {
-            return super.precioFinal()+50.0;
+        if (this.Carga > 30) {
+            return super.precioFinal() + 50.0;
         }
         return super.precioFinal();
     }

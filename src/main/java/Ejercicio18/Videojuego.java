@@ -1,15 +1,16 @@
 package Ejercicio18;
 
-public class Videojuego implements Entregable{
+public class Videojuego implements Entregable {
     private String titulo;
-    private Double horasEstimadas=10.0;
-    private Boolean entregado=false;
+    private Double horasEstimadas = 10.0;
+    private Boolean entregado = false;
     private String genero;
     private String compania;
 
-    public Videojuego(){
+    public Videojuego() {
 
     }
+
     public Videojuego(String titulo, Double horasEstimadas) {
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
@@ -24,12 +25,12 @@ public class Videojuego implements Entregable{
 
     @Override
     public void entregar() {
-        this.entregado=false;
+        this.entregado = false;
     }
 
     @Override
     public void devolver() {
-        this.entregado=true;
+        this.entregado = true;
     }
 
     @Override

@@ -1,10 +1,10 @@
 package Ejercicio18;
 
-public class Serie implements Entregable{
+public class Serie implements Entregable {
 
     private String titulo;
-    private Integer numTemporadas=3;
-    private Boolean entregado=false;
+    private Integer numTemporadas = 3;
+    private Boolean entregado = false;
     private String genero;
     private String creador;
 
@@ -25,12 +25,12 @@ public class Serie implements Entregable{
 
     @Override
     public void entregar() {
-        this.entregado=false;
+        this.entregado = false;
     }
 
     @Override
     public void devolver() {
-        this.entregado=true;
+        this.entregado = true;
     }
 
     @Override
